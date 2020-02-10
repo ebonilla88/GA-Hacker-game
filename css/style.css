@@ -1,0 +1,45 @@
+h1 {
+z-index: 2;
+position: absolute;
+width: 291px;
+height: 78px;
+left: 20px;
+top: 190px;
+right: 500px;
+
+font-family: 'Press Start 2P', cursive;
+font-style: normal;
+font-weight: 300;
+font-size: 50px;
+line-height: 65px;
+
+color: #06FF01;
+
+}
+button{
+/* Rectangle 3 */
+z-index: 2;
+position: absolute;
+width: 250px;
+height: 30px;
+left: 20px;
+top: 400px;
+background: #020202;
+border: 1px solid #06FF01;
+box-sizing: border-box;
+color: #06FF01;
+font-family: 'Press Start 2P', cursive;
+}
+.square{
+/* z-index: 1; */
+position: relative;
+width: 400px;
+height: 700px;
+
+background: #020202;
+mix-blend-mode: hard-light;
+border: 1px solid #06FF01;
+box-sizing: border-box;
+}
+img{
+  right: auto;
