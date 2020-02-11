@@ -4,7 +4,7 @@ position: absolute;
 width: 291px;
 height: 78px;
 left: 20px;
-top: 190px;
+top: 290px;
 right: 500px;
 
 font-family: 'Press Start 2P', cursive;
@@ -23,7 +23,7 @@ position: absolute;
 width: 250px;
 height: 30px;
 left: 20px;
-top: 400px;
+top: 500px;
 background: #020202;
 border: 1px solid #06FF01;
 box-sizing: border-box;
@@ -32,6 +32,8 @@ font-family: 'Press Start 2P', cursive;
 }
 .square{
 /* z-index: 1; */
+display: flex;
+flex-direction: column;
 position: relative;
 width: 400px;
 height: 700px;
@@ -42,4 +44,17 @@ border: 1px solid #06FF01;
 box-sizing: border-box;
 }
 img{
-  right: auto;
+  z-index: 2;
+
+  top: 200px;
+  left: 1550px;
+}
+input{
+  color: #06FF01;
+  margin-top: 425px;
+  align-self: center;
+  width: 95%;
+  background: #020202;
+  border: 1px solid #020202;
+  font-size: 20px;
+}
