@@ -18,6 +18,29 @@
 //
 // })
 
+const brock = {
+  notes: ["1. my first note", "2. my second note"],
+  emails: ["e1@gmail.com", "e2@gmail.com"]
+}
+
+const kesha = {
+  notes: ["kesha first note", "kesha my second note"],
+  emails: ["e1@gmail.com", "e2@gmail.com"]
+}
+
+const ceo = {
+  notes: ["my first note", "my second note"],
+  emails: ["e1@gmail.com", "e2@gmail.com"]
+}
+
+function nOutput(arr, key){
+  let output= `${key}: `
+  for(let i = 0; i < arr.length; i++){
+    output += arr[i] + " "
+  }
+  return output
+}
+const firstPress = true
 
 function createHTMLForLine(text) {
   const mainDiv = document.querySelector("#main")
@@ -27,8 +50,6 @@ function createHTMLForLine(text) {
 
 }
 
-
-
 //CACHED ELEMENTS
 let btn = document.querySelector('#btn');
 let input= document.querySelector('#input')
@@ -36,6 +57,7 @@ let main= document.querySelector('.main')
 let commands = document.querySelector('.commands')
 let img= document.querySelector('img')
 let consoleDiv = document.querySelector('.console');
+
 //EVENT LISTENERS
 btn.addEventListener('click', startBtn);
 input.addEventListener('keypress', enterStr);
@@ -45,40 +67,54 @@ input.addEventListener('keypress', enterStr);
 
 function enterStr(event){
   if (event.key == 'Enter') {
-    console.log(event.target.value)
-    checkInput(event.target.value);
+    //checkInput(event.target.value);
     const command2 =document.createElement('p')
-    command2.textContent = event.target.value;
+    // before doing ifs, split the input on :, check first value
+    const split = event.target.value.split(":")
+    if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "help"){
+        addCommandLine("Help menu:")
+        addCommandLine("Type run to start hack routine")
 
-
-    // if(commands.firstChild){
-    //   commands.insertBefore(command2, commands.firstChild)
-    // } else {
-    commands.appendChild(command2)
-    // }
+    }else if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "run") {
+        addCommandLine(" | | | | | | ")
+        addCommandLine("Running hack routine...")
+        addCommandLine("Successfully launched")
+        addCommandLine("Type username")
+    } else if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "brock") {
+        addCommandLine(nOutput(brock.emails, "emails"))
+          addCommandLine(nOutput(brock.notes, "notes"))
+    }else if((split.length > 0) && split[0] === "username" && split[1] === "kesha") {
+      addCommandLine(nOutput(kesha.notes, "notes"))
+    } else {
+      // do the stuff you did
+        command2.textContent = event.target.value;
+    }
+    commands.prepend(command2)
   }
 }
 
 function startBtn(){
   main.remove();
   img.remove();
-
+  // get a reference to the element that you want to display stuff inspect
+  addCommandLine("Local System Startup")
+  addCommandLine("Bootup complete")
+  addCommandLine("Version 1.0")
+  addCommandLine("Started: 2/14/2020")
+  addCommandLine(`Type 'help' to display game Menu`)
+  addCommandLine(`Type 'run' to start hacking`)
+  // set the innerHTML value of that element to what you want to be displayed
 }
+
 
 function addCommandLine(input) {
   const p = document.createElement('p');
   p.textContent = input;
   document.querySelector('.commands').prepend(p);
-  document.querySelector('#input').value = "GA-sei-8-//:";
+  document.querySelector('#input').value = "sei-8-:";
 }
 
-function checkInput(str){
-  // if(str == "ls" || str == "GA-sei-8-//:ls"){
-  //   addCommandLine(str)
-  // } else {
-    addCommandLine(str)
-  // }
-}
+
 
 
 
