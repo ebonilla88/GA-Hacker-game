@@ -12,7 +12,6 @@ font-style: normal;
 font-weight: 300;
 font-size: 50px;
 line-height: 65px;
-
 color: #06FF01;
 
 }
@@ -30,13 +29,13 @@ box-sizing: border-box;
 color: #06FF01;
 font-family: 'Press Start 2P', cursive;
 }
-.square{
+.console{
 /* z-index: 1; */
 display: flex;
 flex-direction: column;
 position: relative;
 width: 400px;
-height: 700px;
+height: 650px;
 
 background: #020202;
 mix-blend-mode: hard-light;
@@ -44,12 +43,28 @@ border: 1px solid #06FF01;
 box-sizing: border-box;
 }
 img{
+  position: absolute;
   z-index: 2;
-
-  top: 200px;
-  left: 1550px;
+  left: 100px;
+  top: 25px;
 }
+
 input{
+  font-family: 'Press Start 2P', cursive;
+  color: #06FF01;
+  align-self: flex-end;
+  width: 97%;
+  height: 5%;
+  margin-top: 2px;
+  align-items: flex-end;
+  background: #020202;
+  border: 1px solid #06FF01;
+  font-size: 20px;
+  padding:5px;
+}
+.consoleLog{
+  top: 25px;
+
   color: #06FF01;
   margin-top: 425px;
   align-self: center;
@@ -57,4 +72,55 @@ input{
   background: #020202;
   border: 1px solid #020202;
   font-size: 20px;
+}
+.commands{
+  font-family: 'Press Start 2P', cursive;
+
+  width: 100%;
+  height: 95%;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column-reverse;
+}
+p {
+  color: #06FF01;
+
+  margin: 0;
+}
+
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
 }
