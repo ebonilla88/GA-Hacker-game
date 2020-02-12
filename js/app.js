@@ -20,7 +20,7 @@
 
 const brock = {
   notes: ["1. my first note", "2. my second note"],
-  emails: ["e1@gmail.com", "e2@gmail.com"]
+  emails: ["email From Kesha", "email from CEO"]
 }
 
 const kesha = {
@@ -80,9 +80,14 @@ function enterStr(event){
         addCommandLine("Running hack routine...")
         addCommandLine("Successfully launched")
         addCommandLine("Type username")
-    } else if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "brock") {
+        document.querySelector('#input').value = "Username:";
+
+    } else if ((split.length > 0) && split[0] === "Username" && split[1] === "brock") {
+      document.querySelector('#input').value = "Password:";
+    }else if ((split.length > 0) && split[0] === "Password" && split[1] === "LaCroix") {
         addCommandLine(nOutput(brock.emails, "emails"))
-          addCommandLine(nOutput(brock.notes, "notes"))
+        addCommandLine(nOutput(brock.notes, "notes"))
+        document.querySelector('#input').value = "Brock:";
     }else if((split.length > 0) && split[0] === "username" && split[1] === "kesha") {
       addCommandLine(nOutput(kesha.notes, "notes"))
     } else {
