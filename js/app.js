@@ -31,10 +31,10 @@ const kesha = {
 }
 
 const ceo = {
-  notes: ["this dude brock loves Goldenrod colored things"],
+  notes: ["this dude Brock loves Goldenrod colored things"],
   emails: ["kesha       <sent>"],
   message: [`Brock is canadian` ],
-  passwords: ["The Matrix"],
+  passwords: ["DontKnowWhatImDoing"],
 }
 
 function nOutput(arr, key){
@@ -292,11 +292,27 @@ function enterStr(event){
         ceoProfile()
         document.querySelector('#input').value = "CEO:";
 
-    }else if((split.length > 0) && split[0] === "CEO" && split[1] === "notes") {
+    } else if(event.target.value === "CEO:message:cd .."){
+        ceoProfile()
+        document.querySelector('#input').value = "CEO:";
+
+    }else if(event.target.value === "CEO:passwords:cd .."){
+        ceoProfile()
+        document.querySelector('#input').value = "CEO:";
+
+    }else if((split.length > 0) && split[0] === "CEO" && split[1] === "notes"){
         addCommandLine(nOutput(ceo.notes, "notes"))
         document.querySelector('#input').value = "CEO:notes:";
 
-    }else if((split.length > 0) && split[0] === "CEO" && split[1] === "exit"){
+    } else if((split.length > 0) && split[0] === "CEO" && split[1] === "message") {
+        addCommandLine(nOutput(ceo.message, "message"))
+        document.querySelector('#input').value = "CEO:message:";
+
+    } else if((split.length > 0) && split[0] === "CEO" && split[1] === "passwords") {
+        addCommandLine(nOutput(ceo.passwords, "passwords"))
+        document.querySelector('#input').value = "CEO:passwords:";
+
+    } else if((split.length > 0) && split[0] === "CEO" && split[1] === "cd .."){
         addCommandLine("Username List:")
         addCommandLine("- Brock LaCroix")
         addCommandLine("- Kesha")
@@ -356,6 +372,7 @@ function ceoProfile(){
   addCommandLine("- emails")
   addCommandLine("- notes")
   addCommandLine("- passwords")
+  addCommandLine("- message")
 }
 
 
