@@ -18,6 +18,6 @@ Tools used : HTML, CSS, JavaScript
 
 Bugs and missing features:
   - increase variable structure
-  - no change in input commands
+  - terminal command path needs to be fixed for each section.
   - add animations
  
