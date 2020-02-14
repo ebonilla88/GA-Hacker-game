@@ -21,7 +21,7 @@
 const brock = {
   notes: ["I love LaCroix eh"],
   emails: ["kesha      <sent>"],
-  message: [`I found this article about react, I know how much you love 'react'`]
+  message: [`Hey Kesha, I found this article about react, I know how much you love 'react'`]
 }
 
 const kesha = {
