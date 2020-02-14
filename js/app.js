@@ -31,9 +31,9 @@ const kesha = {
 }
 
 const ceo = {
-  notes: ["this dude Brock loves Goldenrod colored things"],
+  notes: ["this dude Brock loves Goldenrod colored things "],
   emails: ["kesha       <sent>"],
-  message: [`Brock is canadian` ],
+  message: [` Did you know Brock is canadian?` ],
   passwords: ["DontKnowWhatImDoing"],
 }
 
@@ -77,7 +77,7 @@ function enterStr(event){
     if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "help"){
       addCommandLine("#####################################")
       addCommandLine("Help menu:")
-      addCommandLine("- Mission: find CEO's secret message")
+      addCommandLine("- Mission: find CEO's passwords")
       addCommandLine(`- Type 'run' to start hack routine`)
       addCommandLine("######################################")
     } else if ((split.length > 0) && split[0] === "sei-8-" && split[1] === "run") {
@@ -180,10 +180,10 @@ function enterStr(event){
         addCommandLine("----------------------------------------")
         document.querySelector('#input').value = "Password:";
 
-    }else if ((split.length > 0) && split[0] === "Password" && split[1] === "cd ..") {
+    } else if ((split.length > 0) && split[0] === "Password" && split[1] === "cd ..") {
         document.querySelector('#input').value = "Username:";
 
-    }else if ((split.length > 0) && split[0] === "Username" && split[1] === "kesha") {
+    } else if ((split.length > 0) && split[0] === "Username" && split[1] === "kesha") {
         document.querySelector('#input').value = "Password:";
 
     } else if((split.length > 0) && split[0] === "Password" && split[1] === "react" || split[1] === "React") {
@@ -213,7 +213,7 @@ function enterStr(event){
           addCommandLine(nOutput(kesha.emails, "emails"))
           document.querySelector('#input').value = "Kesha:emails:";
 
-    } else if(event.target.value == "Kesha:emails:ceo") {
+    } else if(event.target.value === "Kesha:emails:ceo" || event.target.value === "Kesha:emails:CEO") {
         addCommandLine(nOutput(kesha.message, "message"))
         document.querySelector('#input').value = "Kesha:emails:ceo:";
 
@@ -284,7 +284,7 @@ function enterStr(event){
           ceoProfile()
           document.querySelector('#input').value = "CEO:";
 
-    }else if((split.length > 0) && split[0] === "CEO" && split[1] === "emails"){
+    } else if((split.length > 0) && split[0] === "CEO" && split[1] === "emails"){
         addCommandLine(nOutput(ceo.emails, "emails"))
         document.querySelector('#input').value = "CEO:emails:";
 
@@ -296,11 +296,11 @@ function enterStr(event){
         ceoProfile()
         document.querySelector('#input').value = "CEO:";
 
-    }else if(event.target.value === "CEO:passwords:cd .."){
+    } else if(event.target.value === "CEO:passwords:cd .."){
         ceoProfile()
         document.querySelector('#input').value = "CEO:";
 
-    }else if((split.length > 0) && split[0] === "CEO" && split[1] === "notes"){
+    } else if((split.length > 0) && split[0] === "CEO" && split[1] === "notes"){
         addCommandLine(nOutput(ceo.notes, "notes"))
         document.querySelector('#input').value = "CEO:notes:";
 
@@ -309,9 +309,7 @@ function enterStr(event){
         document.querySelector('#input').value = "CEO:message:";
 
     } else if((split.length > 0) && split[0] === "CEO" && split[1] === "passwords") {
-        addCommandLine(nOutput(ceo.passwords, "passwords"))
-        document.querySelector('#input').value = "CEO:passwords:";
-
+        final()
     } else if((split.length > 0) && split[0] === "CEO" && split[1] === "cd .."){
         addCommandLine("Username List:")
         addCommandLine("- Brock LaCroix")
@@ -333,6 +331,18 @@ function enterStr(event){
     }
     commands.prepend(command2)
   }
+}
+
+function final(){
+
+  main.remove();
+  img.remove();
+  input.remove();
+  // consoleDiv.remove();
+  let matrixGif = document.createElement("img");
+  matrixGif.src="images/download.gif";
+  matrixGif.className = "matrix-gif";
+  consoleDiv.appendChild(matrixGif);
 }
 
 function startBtn(){
@@ -372,7 +382,6 @@ function ceoProfile(){
   addCommandLine("- emails")
   addCommandLine("- notes")
   addCommandLine("- passwords")
-  addCommandLine("- message")
 }
 
 

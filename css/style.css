@@ -89,6 +89,13 @@ p {
   margin: 0;
 }
 
+.matrix-gif {
+  /* z-index: 1; */
+  width: 396px;
+  height: 613.7px;
+  left: 0px;
+  top: 1px;
+}
 
 @-webkit-keyframes zoomOut {
   from {
