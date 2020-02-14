@@ -9,9 +9,9 @@ Hacking into new accounts or discovering key information will increase your skil
 Wireframe
 ![Initial Idea](images/OriginalIdea.png)
 ![Initial Intro](images/intro.04.58 PM.png)
-![Initial Intro](images/intro#2.03.31 PM.png)
-![Initial Intro](images/console.04.13 PM.png)
-![Initial Intro](images/ifwon.04.41 PM.png)
+![Initial Intro#2](images/intro#2.03.31 PM.png)
+![Initial Console](images/console.04.13 PM.png)
+![Initial IfWon](images/ifwon.04.41 PM.png)
 
 
 Tools used : HTML, CSS, JavaScript
