@@ -7,7 +7,7 @@ As you hack into their systems, you will learn about the organization and the pe
 Hacking into new accounts or discovering key information will increase your skill level. As you achieve your goals, you will move closer and closer to the final achievement
 
 Wireframe
-![alt text](images/Screen Shot 2020-02-13 at 9.03.31 PM.png)
+![Initial Idea](images/OriginalIdea.png)
 
 Tools used : HTML, CSS, JavaScript
 
