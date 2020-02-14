@@ -7,6 +7,7 @@ As you hack into their systems, you will learn about the people who work there. 
 Hacking into new accounts or discovering key information will increase your skill level. As you achieve your goals, you will move closer and closer to the final achievement.
 
 Wireframe:
+
 ![Initial Intro#2](images/intro#2.png)
 ![Initial Console](images/console.png)
 ![Initial IfWon](images/ifwon.png)
