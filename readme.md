@@ -6,6 +6,8 @@ As you hack into their systems, you will learn about the people who work there. 
 
 Hacking into new accounts or discovering key information will increase your skill level. As you achieve your goals, you will move closer and closer to the final achievement.
 
+Link to the game: https://ebonilla88.github.io/GA-Hacker-game/ 
+
 Wireframe:
 ![frames](images/Untitled@3x.png)
 
